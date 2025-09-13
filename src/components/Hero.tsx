@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden particle-bg">
+  <section id="home" className="min-h-[70vh] relative overflow-hidden particle-bg">
       {/* Animated Gaming Background */}
       <div className="absolute inset-0 tech-grid opacity-20"></div>
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -33,16 +33,16 @@ const Hero = () => {
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[60vh] py-8">
           
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6">
+            <div className="inline-block px-3 py-1 rounded-full border border-primary/20 bg-primary/10 mb-2">
               <span className="text-primary text-sm font-medium">Professional Tech Solutions</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
               <span className="text-primary">
                 OP Techify
               </span>
@@ -56,13 +56,13 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-lg text-muted-foreground mb-4 max-w-lg mx-auto lg:mx-0">
               Professional laptop repairs, custom gaming PC builds, and expert tech consultancy. 
               Fast, reliable, and certified solutions for all your tech needs.
             </p>
 
             {/* Feature Pills */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2 px-4 py-2 rounded-full bg-card border border-border gaming-card">
                   <feature.icon className="w-4 h-4 text-primary" />
@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-2">
               <Button 
                 onClick={handleGetStarted}
                 size="lg" 
@@ -92,9 +92,9 @@ const Hero = () => {
             </div>
 
             {/* Service Areas */}
-            <div className="mt-8 text-center lg:text-left">
-              <div className="flex flex-col items-center justify-center mt-8">
-                <p className="text-sm text-muted-foreground mb-2 text-center">Serving:</p>
+            <div className="mt-4 text-center lg:text-left">
+              <div className="flex flex-col items-center justify-center mt-2">
+                <p className="text-sm text-muted-foreground mb-1 text-center">Serving:</p>
                 <div className="flex gap-2 justify-center">
                   {["Panchkula", "Chandigarh", "Mohali"].map((area, index) => (
                     <span key={index} className="text-sm text-primary font-medium">
