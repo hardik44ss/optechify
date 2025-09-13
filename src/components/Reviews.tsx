@@ -82,7 +82,7 @@ const Reviews = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">What Our</span>
             <br />
-            <span className="gradient-animated bg-clip-text text-transparent">Customers Say</span>
+            <span className="text-primary">Customers Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Real feedback from satisfied customers across Chandigarh, Panchkula, and Mohali.
