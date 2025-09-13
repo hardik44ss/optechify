@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-neon gradient-animated bg-clip-text text-transparent mb-4">
+              <h3 className="text-2xl font-bold text-primary mb-4">
                 OP Techify
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -106,12 +106,7 @@ const Footer = () => {
               ))}
             </ul>
 
-            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-primary mr-2" />
-                <span className="text-primary font-medium text-sm">24/7 Emergency Support</span>
-              </div>
-            </div>
+            {/* ...existing code... */}
           </div>
 
           {/* Quick Links */}
@@ -140,7 +135,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center text-muted-foreground">
                   <Mail className="w-4 h-4 text-secondary mr-2" />
-                  <span>optechify@gmail.com</span>
+                  <span>optc44988@gmail.com</span>
                 </div>
               </div>
             </div>

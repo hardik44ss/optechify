@@ -188,6 +188,15 @@ Please get back to me soon. Thanks!`;
                   />
                 </div>
 
+                {/* Email Box Below Send Us a Message */}
+                <div className="mt-8 p-4 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center space-x-3">
+                  <Mail className="w-6 h-6 text-secondary" />
+                  <div>
+                    <h4 className="font-semibold text-foreground">Email Us Directly</h4>
+                    <p className="text-secondary">optc44988@gmail.com</p>
+                  </div>
+                </div>
+
                 <Button 
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90 hover-glow-cyan group"
@@ -270,7 +279,7 @@ Please get back to me soon. Thanks!`;
                   <Mail className="w-6 h-6 text-secondary" />
                   <div>
                     <h4 className="font-semibold text-foreground">Email Us</h4>
-                    <p className="text-secondary">optechify@gmail.com</p>
+                    <p className="text-secondary">optc44988@gmail.com</p>
                     <p className="text-sm text-muted-foreground">We respond within 2 hours</p>
                   </div>
                 </div>

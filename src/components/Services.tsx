@@ -24,7 +24,6 @@ const Services = () => {
       title: "Laptop Repair",
       description: "Expert diagnosis and repair for all laptop brands. Screen replacement, motherboard repair, and performance optimization.",
       features: ["Screen Replacement", "Motherboard Repair", "SSD/HDD Upgrade", "Overheating Fix"],
-      price: "Starting ₹500",
       color: "primary"
     },
     {
@@ -32,7 +31,6 @@ const Services = () => {
       title: "Custom PC Build",
       description: "Professional custom PC assembly tailored to your needs. Gaming, productivity, or workstation builds with warranty.",
       features: ["Component Selection", "Professional Assembly", "Performance Testing", "1 Year Warranty"],
-      price: "Starting ₹25,000",
       color: "secondary"
     },
     {
@@ -40,7 +38,6 @@ const Services = () => {
       title: "Gaming Rig Setup",
       description: "High-performance gaming PC builds optimized for ultimate gaming experience with RGB lighting and cooling.",
       features: ["RGB Lighting Setup", "Liquid Cooling", "Overclocking", "Game Optimization"],
-      price: "Starting ₹50,000",
       color: "accent"
     },
     {
@@ -48,7 +45,6 @@ const Services = () => {
       title: "Free Consultancy", 
       description: "Expert advice on hardware selection, upgrades, and troubleshooting. Get professional recommendations for free.",
       features: ["Hardware Selection", "Upgrade Advice", "Troubleshooting", "Performance Tips"],
-      price: "Completely Free",
       color: "primary"
     }
   ];
@@ -128,7 +124,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <div className="text-center">
                   <Button 
                     onClick={() => handleWhatsApp(service.title)}

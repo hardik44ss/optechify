@@ -161,25 +161,7 @@ const Reviews = () => {
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "500+", label: "Happy Customers", color: "primary" },
-            { value: "24/7", label: "Support Available", color: "secondary" },
-            { value: "98%", label: "Success Rate", color: "accent" },
-            { value: "3", label: "Service Areas", color: "primary" }
-          ].map((stat, index) => (
-            <div key={index} className="gaming-card p-6 rounded-xl hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className={`text-3xl font-bold mb-2 hover:animate-glow-pulse ${
-                stat.color === 'primary' ? 'text-primary' :
-                stat.color === 'secondary' ? 'text-secondary' : 'text-accent'
-              }`}>
-                {stat.value}
-              </div>
-              <div className="text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+  {/* ...existing code... */}
       </div>
     </section>
   );

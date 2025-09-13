@@ -19,8 +19,18 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden particle-bg">
-      {/* Animated Background */}
+      {/* Animated Gaming Background */}
       <div className="absolute inset-0 tech-grid opacity-20"></div>
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Example gaming animation: moving neon lines and floating icons */}
+        <div className="absolute top-1/4 left-10 w-32 h-1 bg-gradient-to-r from-primary to-accent animate-move-x" style={{animationDuration: '4s'}}></div>
+        <div className="absolute bottom-1/3 right-20 w-24 h-1 bg-gradient-to-r from-accent to-primary animate-move-x-reverse" style={{animationDuration: '5s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-spin-slow">
+            <circle cx="30" cy="30" r="28" stroke="#00f0ff" strokeWidth="4" strokeDasharray="10 10" />
+          </svg>
+        </div>
+      </div>
       
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
@@ -83,13 +93,15 @@ const Hero = () => {
 
             {/* Service Areas */}
             <div className="mt-8 text-center lg:text-left">
-              <p className="text-sm text-muted-foreground mb-2">Serving:</p>
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                {["Panchkula", "Chandigarh", "Mohali"].map((area, index) => (
-                  <span key={index} className="text-sm text-primary font-medium">
-                    {area}{index < 2 && " • "}
-                  </span>
-                ))}
+              <div className="flex flex-col items-center justify-center mt-8">
+                <p className="text-sm text-muted-foreground mb-2 text-center">Serving:</p>
+                <div className="flex gap-2 justify-center">
+                  {["Panchkula", "Chandigarh", "Mohali"].map((area, index) => (
+                    <span key={index} className="text-sm text-primary font-medium">
+                      {area}{index < 2 && " • "}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -110,16 +122,7 @@ const Hero = () => {
               <div className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-accent rounded-full animate-particle-float" style={{ animationDelay: '2s' }}></div>
             </div>
 
-            {/* Floating Stats Cards */}
-            <div className="absolute -top-4 -left-4 bg-card border border-border rounded-lg p-4 gaming-card animate-glow-pulse">
-              <div className="text-2xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Repairs Done</div>
-            </div>
-            
-            <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-4 gaming-card animate-glow-pulse" style={{ animationDelay: '1s' }}>
-              <div className="text-2xl font-bold text-secondary">24/7</div>
-              <div className="text-sm text-muted-foreground">Support</div>
-            </div>
+            {/* ...existing code... */}
           </div>
         </div>
       </div>
