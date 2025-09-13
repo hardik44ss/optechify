@@ -111,7 +111,7 @@ Please get back to me soon. Thanks!`;
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">Ready to Fix Your</span>
             <br />
-            <span className="text-neon gradient-animated bg-clip-text text-transparent">Tech Issues?</span>
+            <span className="gradient-animated bg-clip-text text-transparent">Tech Issues?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get in touch with our expert technicians. Fast response, transparent pricing, and professional service guaranteed.

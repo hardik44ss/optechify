@@ -89,7 +89,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">Professional Tech</span>
             <br />
-            <span className="text-neon gradient-animated bg-clip-text text-transparent">Solutions</span>
+            <span className="gradient-animated bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From laptop repairs to custom gaming PC builds, we provide comprehensive tech solutions 
