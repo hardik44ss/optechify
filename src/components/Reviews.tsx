@@ -75,8 +75,8 @@ const Reviews = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6 hover-scale">
             <span className="text-primary text-sm font-medium">Customer Reviews</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -90,12 +90,12 @@ const Reviews = () => {
         </div>
 
         {/* Featured Review */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <Card className="gaming-card p-8 text-center relative overflow-hidden">
-            <div className="absolute top-4 left-4">
+        <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
+          <Card className="gaming-card p-8 text-center relative overflow-hidden hover-scale">
+            <div className="absolute top-4 left-4 animate-glow-pulse">
               <Quote className="w-8 h-8 text-primary/30" />
             </div>
-            <div className="absolute bottom-4 right-4 rotate-180">
+            <div className="absolute bottom-4 right-4 rotate-180 animate-glow-pulse" style={{ animationDelay: '1s' }}>
               <Quote className="w-8 h-8 text-primary/30" />
             </div>
             
@@ -140,7 +140,7 @@ const Reviews = () => {
         {/* Review Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.slice(0, 6).map((review, index) => (
-            <Card key={index} className="gaming-card">
+            <Card key={index} className="gaming-card hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -149,7 +149,7 @@ const Reviews = () => {
                       {review.location} • {review.service}
                     </CardDescription>
                   </div>
-                  <div className="flex">{renderStars(review.rating)}</div>
+                  <div className="flex hover:animate-glow-pulse">{renderStars(review.rating)}</div>
                 </div>
               </CardHeader>
               <CardContent>
@@ -163,22 +163,22 @@ const Reviews = () => {
 
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="gaming-card p-6 rounded-xl">
-            <div className="text-3xl font-bold text-primary mb-2">500+</div>
-            <div className="text-muted-foreground">Happy Customers</div>
-          </div>
-          <div className="gaming-card p-6 rounded-xl">
-            <div className="text-3xl font-bold text-secondary mb-2">24/7</div>
-            <div className="text-muted-foreground">Support Available</div>
-          </div>
-          <div className="gaming-card p-6 rounded-xl">
-            <div className="text-3xl font-bold text-accent mb-2">98%</div>
-            <div className="text-muted-foreground">Success Rate</div>
-          </div>
-          <div className="gaming-card p-6 rounded-xl">
-            <div className="text-3xl font-bold text-primary mb-2">3</div>
-            <div className="text-muted-foreground">Service Areas</div>
-          </div>
+          {[
+            { value: "500+", label: "Happy Customers", color: "primary" },
+            { value: "24/7", label: "Support Available", color: "secondary" },
+            { value: "98%", label: "Success Rate", color: "accent" },
+            { value: "3", label: "Service Areas", color: "primary" }
+          ].map((stat, index) => (
+            <div key={index} className="gaming-card p-6 rounded-xl hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className={`text-3xl font-bold mb-2 hover:animate-glow-pulse ${
+                stat.color === 'primary' ? 'text-primary' :
+                stat.color === 'secondary' ? 'text-secondary' : 'text-accent'
+              }`}>
+                {stat.value}
+              </div>
+              <div className="text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

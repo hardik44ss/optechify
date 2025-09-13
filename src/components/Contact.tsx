@@ -104,8 +104,8 @@ Please get back to me soon. Thanks!`;
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6 hover-scale">
             <span className="text-primary text-sm font-medium">Get In Touch</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -120,7 +120,7 @@ Please get back to me soon. Thanks!`;
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <Card className="gaming-card">
+          <Card className="gaming-card animate-fade-in hover-scale">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">Send Us a Message</CardTitle>
               <CardDescription className="text-muted-foreground">
@@ -201,19 +201,20 @@ Please get back to me soon. Thanks!`;
           </Card>
 
           {/* Contact Methods & Info */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {/* Quick Contact Methods */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-foreground mb-6">Quick Contact</h3>
               {contactMethods.map((method, index) => (
             <Card 
               key={index} 
-              className={`gaming-card cursor-pointer transition-all duration-300 ${method.onClick ? 'hover:scale-105' : ''}`}
+              className={`gaming-card cursor-pointer transition-all duration-300 hover-scale animate-fade-in ${method.onClick ? 'hover:scale-105' : ''}`}
               onClick={method.onClick}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110 ${
                     method.color === 'primary' ? 'bg-primary/10' :
                     method.color === 'secondary' ? 'bg-secondary/10' : 'bg-accent/10'
                   }`}>

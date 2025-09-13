@@ -82,8 +82,8 @@ const Services = () => {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6 hover-scale">
             <span className="text-primary text-sm font-medium">Our Services</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -100,9 +100,9 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="gaming-card group cursor-pointer">
+            <Card key={index} className="gaming-card group cursor-pointer hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardHeader className="text-center">
-                <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:animate-glow-pulse ${
+                <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:animate-glow-pulse transition-transform group-hover:scale-110 ${
                   service.color === 'primary' ? 'bg-primary/10' :
                   service.color === 'secondary' ? 'bg-secondary/10' : 'bg-accent/10'
                 }`}>
@@ -130,12 +130,6 @@ const Services = () => {
                 </ul>
                 
                 <div className="text-center">
-                <div className={`text-lg font-bold mb-4 ${
-                  service.color === 'primary' ? 'text-primary' :
-                  service.color === 'secondary' ? 'text-secondary' : 'text-accent'
-                }`}>
-                    {service.price}
-                  </div>
                   <Button 
                     onClick={() => handleWhatsApp(service.title)}
                     className={`w-full group ${
@@ -157,7 +151,7 @@ const Services = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Why Choose <span className="text-primary">OP Techify?</span>
           </h3>
@@ -168,8 +162,8 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {whyChoose.map((item, index) => (
-            <div key={index} className="text-center gaming-card p-6 rounded-xl">
-              <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+            <div key={index} className="text-center gaming-card p-6 rounded-xl hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 hover:animate-glow-pulse transition-transform hover:scale-110">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h4 className="text-lg font-semibold text-foreground mb-2">{item.title}</h4>
