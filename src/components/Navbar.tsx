@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import logo from "@/assets/optechify-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-neon bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              OP Techify
-            </h1>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={logo} 
+                alt="OP Techify Logo" 
+                className="h-10 w-10 object-contain"
+              />
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                OP Techify
+              </h1>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
