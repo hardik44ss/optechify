@@ -76,14 +76,6 @@ Please get back to me soon. Thanks!`;
       action: "Chat Now",
       color: "secondary",
       onClick: handleDirectWhatsApp
-    },
-    {
-      icon: MapPin,
-      title: "Service Areas",
-      description: "We come to you",
-      action: "Panchkula • Chandigarh • Mohali",
-      color: "accent",
-      onClick: () => {}
     }
   ];
 
@@ -247,30 +239,6 @@ Please get back to me soon. Thanks!`;
                 </Card>
               ))}
             </div>
-
-            {/* Business Hours & Features */}
-            <Card className="gaming-card">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Clock className="w-6 h-6 text-primary" />
-                  <h4 className="text-lg font-semibold text-foreground">Business Hours</h4>
-                </div>
-                <div className="space-y-2 text-muted-foreground">
-                  <div className="flex justify-between">
-                    <span>Monday - Saturday:</span>
-                    <span className="text-foreground font-medium">9:00 AM - 9:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday:</span>
-                    <span className="text-foreground font-medium">10:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex items-center mt-4 p-3 bg-primary/10 rounded-lg">
-                    <Zap className="w-5 h-5 text-primary mr-2" />
-                    <span className="text-primary font-medium text-sm">24/7 Emergency Support Available</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Email Contact */}
             <Card className="gaming-card">
